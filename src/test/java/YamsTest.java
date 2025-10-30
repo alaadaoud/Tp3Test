@@ -49,6 +49,13 @@ public class YamsTest {
         assertNotEquals(50, Yams.CalculerPoints(nonYams));
     }
 
+    @Test
+    public void testChance() {
+        int[] chance = {1, 3, 4, 5, 6}; // aucune figure
+        assertEquals(1 + 3 + 4 + 5 + 6, Yams.CalculerPoints(chance));
+    }
+
+
 
 
 
