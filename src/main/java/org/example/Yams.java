@@ -36,7 +36,12 @@ public class Yams {
     }
 
 
-
+    private static boolean estGrandeSuite(int[] des) {
+        boolean[] present = new boolean[7];
+        for (int d : des) present[d] = true;
+        return (present[1] && present[2] && present[3] && present[4] && present[5]) ||
+                (present[2] && present[3] && present[4] && present[5] && present[6]);
+    }
 
 
 
@@ -46,7 +51,7 @@ public class Yams {
 
     public static int CalculerPoints(int[] lancer) {
 
-
+        if (estGrandeSuite(lancer)) return 40;
         if (estCarre(lancer)) return 35;
         if (estFull(lancer)) return 30;
         if (estBrelan(lancer)) return 28;
