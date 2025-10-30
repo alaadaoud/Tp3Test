@@ -2,6 +2,7 @@ import org.example.Yams;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class YamsTest {
 
@@ -25,4 +26,21 @@ public class YamsTest {
         int[] full = {2, 2, 2, 3, 3};
         assertEquals(30, Yams.CalculerPoints(full));
          }
+
+    @Test
+    public void testGrandeSuite() {
+        int[] suite1 = {1, 2, 3, 4, 5};
+        int[] suite2 = {2, 3, 4, 5, 6};
+        int[] nonSuite = {1, 3, 4, 5, 6};
+
+        assertEquals(40, Yams.CalculerPoints(suite1));
+        assertEquals(40, Yams.CalculerPoints(suite2));
+        assertNotEquals(40, Yams.CalculerPoints(nonSuite));
+    }
+
+
+
+
+
+
 }

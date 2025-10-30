@@ -37,11 +37,20 @@ public class Yams {
 
 
 
+
+
+
+
+
+
+
     public static int CalculerPoints(int[] lancer) {
+
+
         if (estCarre(lancer)) return 35;
         if (estFull(lancer)) return 30;
         if (estBrelan(lancer)) return 28;
-        return 0;
+        return 0 ;
     }
 
 
