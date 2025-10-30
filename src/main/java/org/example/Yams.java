@@ -54,6 +54,15 @@ public class Yams {
 
 
 
+    private static int sommeDes(int[] des) {
+        int sum = 0;
+        for (int d : des) sum += d;
+        return sum;
+    }
+
+
+
+
 
 
 
@@ -64,7 +73,7 @@ public class Yams {
         if (estCarre(lancer)) return 35;
         if (estFull(lancer)) return 30;
         if (estBrelan(lancer)) return 28;
-        return 0 ;
+        return sommeDes(lancer) ;
     }
 
 
