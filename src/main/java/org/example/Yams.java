@@ -44,6 +44,14 @@ public class Yams {
     }
 
 
+    private static boolean estYams(int[] des) {
+        for (int i = 1; i < des.length; i++) {
+            if (des[i] != des[0]) return false;
+        }
+        return true;
+    }
+
+
 
 
 
@@ -51,6 +59,7 @@ public class Yams {
 
     public static int CalculerPoints(int[] lancer) {
 
+        if (estYams(lancer)) return 50;
         if (estGrandeSuite(lancer)) return 40;
         if (estCarre(lancer)) return 35;
         if (estFull(lancer)) return 30;
