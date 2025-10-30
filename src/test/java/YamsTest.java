@@ -19,4 +19,10 @@ public class YamsTest {
         assertEquals(35, Yams.CalculerPoints(carre));
 
         }
+
+         @Test
+         public void testFull() {
+        int[] full = {2, 2, 2, 3, 3};
+        assertEquals(30, Yams.CalculerPoints(full));
+         }
 }
