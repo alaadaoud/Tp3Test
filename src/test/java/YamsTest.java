@@ -40,6 +40,15 @@ public class YamsTest {
 
 
 
+    @Test
+    public void testYams() {
+        int[] yams = {6, 6, 6, 6, 6};
+        int[] nonYams = {6, 6, 6, 6, 5};
+
+        assertEquals(50, Yams.CalculerPoints(yams));
+        assertNotEquals(50, Yams.CalculerPoints(nonYams));
+    }
+
 
 
 
